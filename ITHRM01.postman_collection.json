@@ -1,0 +1,1856 @@
+{
+	"info": {
+		"_postman_id": "0297dbe0-8432-453c-a260-b8a0e4159842",
+		"name": "ITHRM01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19641083"
+	},
+	"item": [
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "Get List Roles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "28|9dOpxCCyu7w4SXu9Us0xW05e4LcZWEHVNGiE89wQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/api/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|Fg9gmxFJMZxukHtorKiAvWDP4Xmqv6Nck4ENNazY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"sss\",\n    \"description\" : \"aaaa\",\n    \"specialize\" : \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "17|RIoVgkCl99zqOOmrhonhgIskqh1tdlpiY3YG4rJC",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Testtanupdsate\",\n    \"description\" : \"Test2\",\n    \"specialize\" : \"3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/roles/26",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"roles",
+								"26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|RXfboIrhTleEHpr12waPLDN9NZPY4Af4KX4NAYOD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/parts?id=211,2222",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"parts"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "211,2222"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Role By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/roles/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"roles",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Import Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|vB30lmzMRV5wbuGz1NlflZiNMbTSjYk9BcsoH8F4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/tan/Downloads/Part.xlsx"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/api/parts/import",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"parts",
+								"import"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Export",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|MNmHXYp7Ozvgw5q3mZTHde13iuB06ngjIuFkRfga",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/api/staffs/export?ids=21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"staffs",
+								"export"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "all",
+									"disabled": true
+								},
+								{
+									"key": "keyword",
+									"value": "o",
+									"disabled": true
+								},
+								{
+									"key": "end_date",
+									"value": "2023-01-01",
+									"disabled": true
+								},
+								{
+									"key": "ids",
+									"value": "21"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "21|sS3INMLqpJkksIB1nVqN8lztSpUbggEyw79Y1rKb",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/roles/approve?id=1,2,3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"roles",
+								"approve"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1,2,3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Staff",
+			"item": [
+				{
+					"name": "Get List Staffs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "26|LTaqHzHYqcS9GVy4K9frawHgBl6JZZctf1kRM153",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/staffs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"staffs"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "1,2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Export",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "51|Zb9IJB7sg4x3MtkG4yW4j7oCSM8YvRmyFQQd1YPF",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://118.71.204.98:4001/api/staffs/export?start_date=2005-01-01&end_date=2023-10-10&type=all",
+							"protocol": "http",
+							"host": [
+								"118",
+								"71",
+								"204",
+								"98"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"staffs",
+								"export"
+							],
+							"query": [
+								{
+									"key": "ids",
+									"value": "15,19,20",
+									"disabled": true
+								},
+								{
+									"key": "start_date",
+									"value": "2005-01-01"
+								},
+								{
+									"key": "end_date",
+									"value": "2023-10-10"
+								},
+								{
+									"key": "type",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Family",
+			"item": [
+				{
+					"name": "Get List Family",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/family/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"family",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Family",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Test112\",\n    \"birthday\" : \"2001-09-25\",\n    \"relationship_id\": 2,\n    \"phone\": \"0363608121\",\n    \"address\" : \"Từ Sơn\"\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/family/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"family",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Family",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Test1w2334\",\n    \"birthday\" : \"2001-09-25\",\n    \"relationship\": \"Daddy\",\n    \"phone\": \"0363608121\",\n    \"address\": \"Tu Son , Bac Ninh\",\n    \"tax_code\" : \"1020222\",\n    \"nationality\" : \"Viet Nam\",\n    \"identity_card\" : \"125892319\",\n    \"deduction_time_start\" : \"2022-01-01\",\n    \"deduction_time_end\" : \"2023-01-02\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/family/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"family",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Family",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/family/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"family",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Project",
+			"item": [
+				{
+					"name": "Get List Project",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/project/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"project",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"abc\",\n    \"date_start\" : \"2021-02-22\",\n    \"date_end\" : \" 2022-02-22\",\n    \"language\" : \"PHP\",\n    \"framework\" : \"Laravel\",\n    \"description\" : \"Day la test\"\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/project/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"project",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"abc\",\n    \"date_start\" : \"2021-02-22\",\n    \"date_end\" : \" 2022-02-22\",\n    \"language\" : \"PHP\",\n    \"framework\" : \"Laravel\",\n    \"description\" : \"Day la test 11\"\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/project/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"project",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Project",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/staff/1/project/16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"staff",
+								"1",
+								"project",
+								"16"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "WorkingProcess",
+			"item": [
+				{
+					"name": "Get Working Process By Staff Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/process/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"process",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Working Process For Staff",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"job_id\" : 1,\n    \"position_id\" :  1,\n    \"part_id\" : 1 ,\n    \"working_seniority\" : 1,\n    \"date_entry\" : \"2001-01-01\",\n    \"date_official\" : \"2001-01-01\",\n    \"start_date_internship_in_first_month\" : \"2001-01-01\",\n    \"start_date_internship_in_second_month\": \"2001-01-01\",\n    \"date_probationary\": \"2001-01-01\",\n    \"contract_type\" : \"test\",\n    \"status\" : 1,\n    \"account_number\": \"1234567890\",\n    \"bank\" : \"Techcombank\",\n    \"branch_of_bank\" : \"Bac Ninh\",\n    \"role_id\" : 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/process/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"process",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Working Process For Staff",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"job_id\" : 2,\n    \"position_id\" :  1,\n    \"part_id\" : 1 ,\n    \"working_seniority\" : 1,\n    \"date_entry\" : \"2001-01-01\",\n    \"date_official\" : \"2001-01-01\",\n    \"start_date_internship_in_first_month\" : \"2001-01-01\",\n    \"start_date_internship_in_second_month\": \"2001-01-01\",\n    \"date_probationary\": \"2001-01-01\",\n    \"contract_type\" : \"test\",\n    \"status\" : 1,\n    \"account_number\": \"1234567890\",\n    \"bank\" : \"Techcombank\",\n    \"branch_of_bank\" : \"Bac Ninh\",\n    \"role_id\" : 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/process/34",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"process",
+								"34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Working Process Of Staff",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/process/32",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"process",
+								"32"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact Information",
+			"item": [
+				{
+					"name": "Get Contact Information By Staff Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/contactInformation/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"contactInformation",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Contact Information For Staff",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|aqo6AK6i2aXYNWu2eCd5621s3nqcIVIbYHr3zD1C",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": \"123-456-7890\",\n    \"company_email\": \"john.daoe1@company.com\",\n    \"personal_email\": \"johndoea@gmail.com\",\n    \"mattermost\": \"johndoe\",\n    \"facebook\": \"johndoe\",\n    \"skype\": \"johndoe\",\n    \"home_town\": \"New York\",\n    \"city\": \"Ha Noi\",\n    \"birthplace\": \"Chicago\",\n    \"country_permanent_address\": \"Bac Ninh\",\n    \"city_permanent_address\": \"New York City\",\n    \"district_permanent_address\": \"Manhattan\",\n    \"neighborhood_permanent_address\": \"Midtown\",\n    \"house_number_permanent_address\": \"123\",\n    \"address_permanent_address\": \"123 Main Street\",\n    \"country_current_address\": \"Sai Gon\",\n    \"city_current_address\": \"Los Angeles\",\n    \"district_current_address\": \"Downtown\",\n    \"neighborhood_current_address\": \"Hollywood\",\n    \"house_number_current_address\": \"456\",\n    \"address_current_address\": \"456 Elm Street\",\n    \"emergency_contact_name\": \"Jane Smith\",\n    \"emergency_contact_relationship\": \"Sibling\",\n    \"emergency_contact_phone\": \"987-654-3210\",\n    \"emergency_contact_address\" : \"Intracom\",\n    \"isTheSame\" : true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/contactInformation/21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"contactInformation",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Contact Information For Staff",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": \"120\",\n    \"company_email\": \"john.xdaoe1@company.com\",\n    \"personal_email\": \"johndxoea@gmail.com\",\n    \"mattermost\": \"johndcoe\",\n    \"facebook\": \"johndoe\",\n    \"skype\": \"johndoe\",\n    \"home_town\": \"New York\",\n    \"city\": \"Tu Son\",\n    \"birthplace\": \"Chicago\",\n    \"country_permanent_address_id\": 2,\n    \"city_permanent_address\": \"New York City\",\n    \"district_permanent_address\": \"Manhattan\",\n    \"neighborhood_permanent_address\": \"Midtown\",\n    \"house_number_permanent_address\": \"123\",\n    \"address_permanent_address\": \"123 Main Street\",\n    \"country_current_address_id\": 1,\n    \"city_current_address\": \"Los Angeles\",\n    \"district_current_address\": \"Downtown\",\n    \"neighborhood_current_address\": \"Hollywood\",\n    \"house_number_current_address\": \"456\",\n    \"address_current_address\": \"456 Elm Street\",\n    \"emergency_contact_name\": \"Jane Smith\",\n    \"emergency_contact_relationship\": \"Sibling\",\n    \"emergency_contact_phone\": \"987-654-3210\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/contactInformation/22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"contactInformation",
+								"22"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Basic Information",
+			"item": [
+				{
+					"name": "Get Basic Informatiom By Staff Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/basicInformation/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"basicInformation",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Basic Information For Staff",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "6|ZsLaAMMZmwOQbKwhFKU3oA7rRpr2GTNToYm2RkLm",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "staff_code",
+									"value": "12345678z",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Nguyen Van An",
+									"type": "text"
+								},
+								{
+									"key": "gender_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "marital_status_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "birthday",
+									"value": "2001-01-01",
+									"type": "text"
+								},
+								{
+									"key": "ethnic",
+									"value": "Kinh",
+									"type": "text"
+								},
+								{
+									"key": "nationality_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "identity_code",
+									"value": "125892319d",
+									"type": "text"
+								},
+								{
+									"key": "date_of_issuance_of_identity_card",
+									"value": "2016-01-01",
+									"type": "text"
+								},
+								{
+									"key": "address_of_issuance_of_identity_card",
+									"value": "Bac Ninh",
+									"type": "text"
+								},
+								{
+									"key": "educational_level_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "educational_institution",
+									"value": "Tu Son",
+									"type": "text"
+								},
+								{
+									"key": "educational_major_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "graduation_year_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "graduation_classification_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"value": "http://localhost/storage/draff/1688463026.png",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/api/basicInformation/23",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"basicInformation",
+								"23"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Basic Information For Staff",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "5|WB8pEns3XW0pLdSf5FNoTB7MHc5soKBLH0NjPmhW",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "staff_code",
+									"value": "112312312312131231\n",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Nguyen Ngoc Tanza",
+									"type": "text"
+								},
+								{
+									"key": "gender_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "marital_status_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "birthday",
+									"value": "2001-09-09",
+									"type": "text"
+								},
+								{
+									"key": "ethnic",
+									"value": "Kinh",
+									"type": "text"
+								},
+								{
+									"key": "nationality_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "identity_code",
+									"value": "125892319a",
+									"type": "text"
+								},
+								{
+									"key": "date_of_issuance_of_identity_card",
+									"value": "2016-01-01",
+									"type": "text"
+								},
+								{
+									"key": "address_of_issuance_of_identity_card",
+									"value": "Bac Ninh",
+									"type": "text"
+								},
+								{
+									"key": "educational_level_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "educational_institution",
+									"value": "Tuong Giang",
+									"type": "text"
+								},
+								{
+									"key": "educational_major_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "graduation_year_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "graduation_classification_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"value": "http://localhost/storage/staff/1688460177.png",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/api/basicInformation/23?_method=PUT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"basicInformation",
+								"23"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "PUT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload temp avatar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "5|WB8pEns3XW0pLdSf5FNoTB7MHc5soKBLH0NjPmhW",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/home/tan/Pictures/Screenshots/Screenshot from 2023-07-03 15-28-10.png"
+								},
+								{
+									"key": "currentImage",
+									"value": "http://localhost/storage/1688460781.png",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/api/basicInformation/temporaryAvatar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"basicInformation",
+								"temporaryAvatar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login Url",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/login/google",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"login",
+								"google"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Callback",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/login/callback/google",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"login",
+								"callback",
+								"google"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Position",
+			"item": [
+				{
+					"name": "Import",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|DkBPSvNTviKEVJZAklwND5PpqCAvKz9u4pUFLcUx",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/tan/Downloads/Position.xlsx"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/api/positions/import",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"positions",
+								"import"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "28|9dOpxCCyu7w4SXu9Us0xW05e4LcZWEHVNGiE89wQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"test\",\n    \"position_id\" : 1,\n    \"roles_for_staff\" : [\"ab\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/jobs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Export",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/positions/export?ids=1,2,3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"positions",
+								"export"
+							],
+							"query": [
+								{
+									"key": "ids",
+									"value": "1,2,3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "28|9dOpxCCyu7w4SXu9Us0xW05e4LcZWEHVNGiE89wQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/positions?page=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"positions"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|DkBPSvNTviKEVJZAklwND5PpqCAvKz9u4pUFLcUx",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/jobs?id=1,2,3,4,5,6,7,8,9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"jobs"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1,2,3,4,5,6,7,8,9"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Part",
+			"item": [
+				{
+					"name": "Import",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|DkBPSvNTviKEVJZAklwND5PpqCAvKz9u4pUFLcUx",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/tan/Downloads/RolesForStaff.xlsx"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/api/parts/import",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"parts",
+								"import"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Export",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|DkBPSvNTviKEVJZAklwND5PpqCAvKz9u4pUFLcUx",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/jobs/export?ids=1,2,3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"jobs",
+								"export"
+							],
+							"query": [
+								{
+									"key": "ids",
+									"value": "1,2,3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "26|LTaqHzHYqcS9GVy4K9frawHgBl6JZZctf1kRM153",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/parts/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"parts",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authorize",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|zGKtCWtOSE0ldQdEr72wGOTL7jUoey4gW2EA8sQE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/assign-role",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"assign-role"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Jobs",
+			"item": [
+				{
+					"name": "Export",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "26|LTaqHzHYqcS9GVy4K9frawHgBl6JZZctf1kRM153",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/jobs/export?ids=1,2,3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"jobs",
+								"export"
+							],
+							"query": [
+								{
+									"key": "ids",
+									"value": "1,2,3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "26|LTaqHzHYqcS9GVy4K9frawHgBl6JZZctf1kRM153",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/jobs/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"jobs",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Import",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|XrlDWTD8gxx7AZHi78HrmgYjAcBDkr3vofpFtoPz",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/tan/Downloads/Jobs.xlsx"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/api/jobs/import",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"jobs",
+								"import"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3|sZSdCAtUDH18mCSp0MuaGhgCzpxBU073uNqR9TeG",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api/branch/getBranchOfBank?province=Ha Noi&bankGroup=Ngan Hang Phat Trien Viet Nam \n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"branch",
+						"getBranchOfBank"
+					],
+					"query": [
+						{
+							"key": "province",
+							"value": "Ha Noi"
+						},
+						{
+							"key": "bankGroup",
+							"value": "Ngan Hang Phat Trien Viet Nam \n"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "access_token",
+			"value": "ya29.a0AWY7Ckk22a0NHlTYBRftFNWvcf-bDUAyuLjp0Rxb-zIDJaaBUUGBl8r0od5GZu3h06K8oxc7_6V_SPfSK6TxacqM9Zzu5WmKzk40qhHVUdYELkkTbEWEPODsOdQCbPoTUKoosEqX-HcdxMZD8KVEmEfNGgpxaCgYKAeYSARMSFQG1tDrpmU7oXpwl31X2oVCDVn4Euw0163"
+		}
+	]
+}
